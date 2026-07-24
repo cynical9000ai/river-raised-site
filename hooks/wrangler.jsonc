@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Generic ingress Worker — not linked from the public artist site.
+  "name": "rrsm-hooks",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-24",
+  "observability": {
+    "enabled": true
+  },
+  // Creates/attaches DNS for hooks.riverraisedsouthernmade.com on deploy.
+  "routes": [
+    {
+      "pattern": "hooks.riverraisedsouthernmade.com",
+      "custom_domain": true
+    }
+  ]
+}
