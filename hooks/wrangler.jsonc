@@ -4,14 +4,19 @@
   "name": "rrsm-hooks",
   "main": "src/index.js",
   "compatibility_date": "2026-07-24",
+  "workers_dev": true,
   "observability": {
     "enabled": true
   },
-  // Creates/attaches DNS for hooks.riverraisedsouthernmade.com on deploy.
+  // Custom domain + explicit route so we beat the site catch-all *.domain/*
   "routes": [
     {
       "pattern": "hooks.riverraisedsouthernmade.com",
       "custom_domain": true
+    },
+    {
+      "pattern": "hooks.riverraisedsouthernmade.com/*",
+      "zone_name": "riverraisedsouthernmade.com"
     }
   ]
 }
