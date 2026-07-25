@@ -1,4 +1,0 @@
-# Copy to .dev.vars for local `npm run dev`
-WEBHOOK_SECRET=change-me
-# Optional: forward POSTs to Make / another receiver
-# UPSTREAM_URL=https://hook.us1.make.com/xxxxxxxx
